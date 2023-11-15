@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PDF con Header, Contenido y Footer</title>
+    <style>
+        /* Estilo de margen para todas las páginas */
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        /* Estilos para el header */
+        header {
+            background-image: url('https://novakademia.s3.amazonaws.com/header-pdf.png');
+            background-repeat: no-repeat;
+            background-size: 99% 100%;
+            position: fixed;
+            top: -200px;
+            /* Coloca el header fuera de la página */
+            left: 0;
+            right: 0;
+            height: 200px;
+            /* Resto de tus estilos */
+        }
+
+        /* Estilos para el footer */
+        footer {
+            background-image: url('https://novakademia.s3.amazonaws.com/footer-pdf.png');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            position: fixed;
+            bottom: -200px;
+            /* Coloca el footer fuera de la página */
+            left: 0;
+            right: 0;
+            height: 130px;
+            /* Resto de tus estilos */
+        }
+
+        /* Estilos para el contenido */
+        main {
+            background-image: url('https://novakademia.s3.amazonaws.com/body-pdf.png');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin: 200px 0;
+            /* Mismo margen que el de la página */
+            /* Resto de tus estilos */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: center;
+        }
+
+        /* Evitar que el contenido se divida entre páginas */
+        main,
+        table,
+        tr {
+            page-break-inside: avoid;
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit cum nobis repudiandae. Aliquam cum molestiae
+            dicta debitis a totam accusantium quisquam, id maxime saepe voluptas, sequi dolorem facilis nulla
+            perspiciatis quo veniam quis veritatis, magni soluta asperiores. Aliquam ut, doloremque nulla dolorem enim
+            illum quasi ea non ab blanditiis omnis asperiores dicta modi quod esse molestiae quae fuga sapiente hic
+            tenetur quidem sequi placeat. Mollitia voluptatum quae voluptatibus vel doloremque, facere unde. Laboriosam
+            possimus quod, sed quae at laborum aut porro. Error est dicta hic inventore perspiciatis quidem fugit? Nemo,
+            expedita provident aperiam, delectus repellat amet rem ipsa reprehenderit esse magni perferendis illo
+            consequatur nobis doloribus aliquam quam dolores, modi eos fugit. Ratione blanditiis, asperiores
+            reprehenderit sunt accusamus id nam. Praesentium id atque illum minima deleniti, earum amet veniam, incidunt
+            fugiat quaerat est eos reiciendis nam maxime enim optio ut? Placeat, quos animi? Corrupti voluptatibus
+            deleniti qui fugit vero ducimus non temporibus vitae, obcaecati reprehenderit veniam ullam optio culpa!
+            Architecto qui ex, maiores neque, natus sint hic libero quo nam illum fuga similique? Suscipit rem ducimus
+            praesentium fuga at corrupti consequuntur vero magnam, sunt facilis odio, eveniet ea alias. Nesciunt nobis
+            autem voluptatibus ea at magni voluptatem quaerat recusandae commodi, numquam impedit quod excepturi soluta
+            laudantium, cum dolores alias earum ipsam molestias dolore eligendi sit illum! Iure quae architecto omnis
+            voluptate quis doloremque quod nisi quasi. Ullam magnam alias, aliquid provident a reiciendis eveniet velit
+            officia commodi autem perferendis fuga quidem debitis vel quod ipsum corporis quasi. Repellat ullam nisi
+            soluta cum voluptatem quas pariatur illum totam molestiae praesentium reiciendis tempora, a officia dolorum
+            officiis facilis eligendi alias! Architecto error velit consequuntur mollitia magnam nostrum hic itaque
+            amet, distinctio sed ipsa rem, fugiat et molestiae assumenda ut beatae illum sit iusto minus. Sit, rerum
+            perferendis velit expedita nisi, quos corrupti nihil veritatis voluptatum sed atque explicabo? Natus laborum
+            temporibus incidunt fugiat tempore aspernatur animi accusantium blanditiis quod, id voluptatem non magni!
+            Eligendi quis, et nostrum cupiditate excepturi, officiis numquam maxime ipsa non iure molestias expedita!
+            Dolor repellendus ea, vero molestias sed architecto obcaecati nisi quod voluptatum temporibus libero
+            asperiores tempora in consequatur harum doloribus, reiciendis placeat accusantium velit! Veritatis ex rerum
+            aperiam aliquid, magnam dolor natus nemo numquam dolorem officia nihil cum incidunt expedita deserunt,
+            repellat eligendi odit, explicabo laudantium laborum minima provident corrupti doloribus hic! Asperiores
+            maiores dicta perferendis. Nesciunt fugit quo suscipit, sunt necessitatibus alias doloremque architecto
+            fugiat? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus voluptatem quibusdam sequi
+            reiciendis atque fuga voluptas? Fuga ut adipisci rem, corrupti, sapiente nisi quam numquam, repudiandae
+            consequuntur commodi ea repellendus accusantium saepe praesentium architecto omnis. Corrupti molestias omnis
+            eius deleniti, hic aut in rem cupiditate velit! Nihil voluptatum asperiores exercitationem quasi repellendus
+            qui iusto, sint nostrum vitae? Nulla neque iste beatae laborum ratione doloribus amet minus quos,
+            consequatur molestias officiis reprehenderit ducimus suscipit totam? Nihil recusandae eaque excepturi
+            commodi iusto fugiat nesciunt iure ipsa cum! Modi, explicabo consectetur. Ea voluptatum earum, libero
+            exercitationem assumenda porro magni amet at laboriosam. Repellendus architecto accusantium voluptatibus vel
+            eaque aliquid placeat, eius fugit optio facere magnam non animi explicabo, reiciendis aspernatur omnis sint,
+            nemo beatae aperiam cupiditate. Voluptas enim ut, at autem deleniti ducimus, odio laboriosam, quaerat neque
+            facilis porro consequuntur. Dolore vero beatae earum corporis amet quidem corrupti atque expedita, eius
+            aliquid exercitationem fuga aliquam. Repellendus eos odio repellat quibusdam molestias. Maxime error, est
+            dolores minima, odit aut molestiae ipsa quos asperiores minus facere pariatur laborum enim dignissimos
+            consectetur porro repellat unde accusamus autem amet non cumque repellendus. Officia voluptas dicta qui
+            placeat voluptatibus suscipit blanditiis atque esse? Numquam accusamus odit libero earum nesciunt vel
+            distinctio aliquid, officia pariatur exercitationem voluptatem neque rerum sapiente fugiat ea cumque
+            recusandae voluptatibus? Mollitia dolore magni possimus porro repellendus optio illo, expedita est, natus
+            incidunt tempora quam, praesentium molestias consectetur dolor placeat ratione excepturi ex? Voluptatum quos
+            repellat neque, similique suscipit quaerat nemo quam quasi tempora distinctio blanditiis voluptates commodi
+            unde natus in officiis, exercitationem minima dolores corrupti vero nesciunt delectus. Magnam, corporis?
+            Placeat, incidunt porro? Reiciendis veniam molestiae magnam fugit quasi labore incidunt explicabo,
+            doloremque praesentium, dolorum excepturi officiis similique. Ducimus labore placeat ex blanditiis animi
+            exercitationem ea vitae nostrum tenetur maxime facere distinctio consequatur, incidunt doloribus, quaerat
+            quis iure modi eius reiciendis aut nihil! Molestias eligendi minus alias nisi temporibus distinctio vero!
+            Quam numquam odit praesentium accusamus perferendis impedit aspernatur laudantium, eius maxime at, ab sequi
+            modi quaerat natus rem. Id ut quos voluptate nesciunt iste repellendus velit molestias repudiandae dolore.
+            Similique totam vitae quae maxime facilis neque modi quos unde voluptatem, voluptates odit labore officia,
+            consectetur, ad minus a porro distinctio necessitatibus architecto libero soluta nulla illo fuga
+            voluptatibus. Rerum eaque molestias nam saepe, ut, quaerat totam cumque illo nihil odit voluptate aperiam
+            vitae non nostrum quae veniam pariatur laudantium in, quasi quis quo.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Columna 1</th>
+                    <th>Columna 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Agregar filas según sea necesario para ocupar múltiples páginas -->
+                <!-- Ejemplo con 30 filas para forzar un salto de página -->
+                {% for data in data_for_table %}
+                <tr>
+                    <td>{{ data }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

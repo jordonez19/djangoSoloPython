@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>PDF con Header y Footer</title>
+    <style>
+        /* Estilos para el header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background-color: red;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        /* Estilos para el footer */
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background-color: red;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        /* Estilos para la tabla */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 70px;
+            /* Ajusta para dejar espacio para el header y footer */
+        }
+
+        th,
+        td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">Header - Nombre del Documento</div>
+    <table>
+        <tr>
+            <th>Dato 1</th>
+            <th>Dato 2</th>
+        </tr>
+        <!-- Renderizar datos desde el contexto -->
+        {% for item in data_for_table %}
+        <tr>
+            <td>{{ item.dato1 }}</td>
+            <td>{{ item.dato2 }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <div class="footer">Footer - Página Actual / Total de Páginas</div>
+</body>
+
+</html>
